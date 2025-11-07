@@ -1,9 +1,21 @@
 import readlinesync = require("readline-sync");
 import { colors } from "./src/util/colors";
+import { Conta } from "./src/model/Conta";
+
 
 export function main() {
 
     let opcao: number;
+
+     // Objeto da Classe Conta (Teste)
+    const conta1: Conta = new Conta(1, 100, 1, "Josy", 1000000);
+    conta1.sacar(500);
+    conta1.visualizar();
+    const conta2: Conta = new Conta(1, 200, 1, "Fernando", 1000000);
+    conta2.sacar(500);
+    conta2.depositar(5000);
+    conta2.visualizar();
+
 
     while (true) {
 
@@ -104,7 +116,7 @@ function sobre(): void {
     console.log("\n*****************************************************");
     console.log("Projeto Desenvolvido por: Joselaine Bechaire");
     console.log("Generation Brasil - generation@generation.org");
-    console.log("github.com/conteudoGeneration");
+    console.log("https://github.com/JBechaire/conta_bancaria.git");
     console.log("*****************************************************");
 }
 
