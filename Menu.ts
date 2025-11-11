@@ -16,6 +16,7 @@ export function main() {
     const conta2: Conta = new Conta(1, 200, 1, "Fernando", 1000000);
     conta2.sacar(500);
     conta2.depositar(5000);
+
     conta2.visualizar();
 
     // Objeto da Classe ContaCorrente (Teste)
