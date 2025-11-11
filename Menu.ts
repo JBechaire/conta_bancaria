@@ -10,17 +10,17 @@ export function main() {
     let opcao: number;
 
      // Objeto da Classe Conta (Teste)
-    const conta1: Conta = new Conta(1, 100, 1, "Josy", 1000000);
+    const conta1: Conta = new Conta(1, 400, 1, "Josy", 1000000);
     conta1.sacar(500);
     conta1.visualizar();
-    const conta2: Conta = new Conta(1, 200, 1, "Fernando", 1000000);
+    const conta2: Conta = new Conta(2, 400, 2, "Fernando", 1000000);
     conta2.sacar(500);
     conta2.depositar(5000);
 
     conta2.visualizar();
 
     // Objeto da Classe ContaCorrente (Teste)
-    const contacorrente: ContaCorrente = new ContaCorrente(10, 400, 1, "Aninha", 2500, 1000);
+    const contacorrente: ContaCorrente = new ContaCorrente(10, 400, 3, "Aninha", 2500, 1000);
     contacorrente.visualizar();
     contacorrente.sacar(2000);
     contacorrente.visualizar();
