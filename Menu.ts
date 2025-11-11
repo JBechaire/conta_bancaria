@@ -20,7 +20,7 @@ export function main() {
     conta2.visualizar();
 
     // Objeto da Classe ContaCorrente (Teste)
-    const contacorrente: ContaCorrente = new ContaCorrente(10, 300, 1, "Aninha", 2500, 1000);
+    const contacorrente: ContaCorrente = new ContaCorrente(10, 400, 1, "Aninha", 2500, 1000);
     contacorrente.visualizar();
     contacorrente.sacar(2000);
     contacorrente.visualizar();
