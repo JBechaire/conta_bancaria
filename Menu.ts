@@ -13,32 +13,31 @@ export function main() {
     const conta1: Conta = new Conta(1, 100, 1, "Josy", 1000000);
     conta1.sacar(500);
     conta1.visualizar();
-    const conta2: Conta = new Conta(1, 200, 1, "Fernando", 1000000);
+    
+    const conta2: Conta = new Conta(2, 100, 2, "Fernando", 1000000);
     conta2.sacar(500);
     conta2.depositar(5000);
-
+    conta2.depositar(1000);
     conta2.visualizar();
 
     // Objeto da Classe ContaCorrente (Teste)
-    const contacorrente: ContaCorrente = new ContaCorrente(10, 400, 1, "Aninha", 2500, 1000);
+    const contacorrente: ContaCorrente = new ContaCorrente(10, 100, 1, "Aninha", 2500, 10000);
     contacorrente.visualizar();
     contacorrente.sacar(2000);
-    contacorrente.visualizar();
     contacorrente.depositar(1000);
     contacorrente.visualizar();
 
     // Objeto da Classe ContaPoupanca (teste)
-    const contapoupanca: ContaPoupanca= new ContaPoupanca(30, 400, 2, "Heitor", 1500, 100);
+    const contapoupanca: ContaPoupanca= new ContaPoupanca(30, 100, 2, "Heitor", 1500, 18);
     contapoupanca.visualizar();
     contapoupanca.sacar(200);
-    contapoupanca.visualizar();
     contapoupanca.depositar(1000);
     contapoupanca.visualizar();
 
     while (true) {
 
         console.log(colors.bg.black, colors.fg.yellow, 
-                    "*****************************************************");
+                 "********************************************************");
         console.log("                                                     ");
         console.log("                BANCO DO BRAZIL COM Z                ");
         console.log("                                                     ");
