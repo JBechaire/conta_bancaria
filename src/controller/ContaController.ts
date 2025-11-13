@@ -12,9 +12,10 @@ export class ContaController implements ContaRepository {
 
         if (buscaConta != null) {
             buscaConta.visualizar();
-        } else
+        }else{
             console.log(colors.fg.red, "\nA Conta numero: " + numero
                 + " não foi encontrada!", colors.reset);
+        }       
     }
 
     listarTodas(): void {
@@ -36,9 +37,10 @@ export class ContaController implements ContaRepository {
             this.listaContas[this.listaContas.indexOf(buscaConta)] = conta;
             console.log(colors.fg.green, "\nA Conta numero: " + conta.numero + 
                         " foi atualizada com sucesso!", colors.reset);
-        } else
+        }else{
             console.log(colors.fg.red, "\nA Conta numero: " + conta.numero + 
                         " não foi encontrada!", colors.reset);
+        }                 
     }
 
     deletar(numero: number): void {
@@ -48,9 +50,10 @@ export class ContaController implements ContaRepository {
             this.listaContas.splice(this.listaContas.indexOf(buscaConta), 1);
         	console.log(colors.fg.green,"\nA Conta numero: " + numero + 
                         " foi apagada com sucesso!", colors.reset);
-        }else
+        }else{
         console.log(colors.fg.red,"\nA Conta numero: " + numero + 
                     " não foi encontrada!", colors.reset);
+        }           
     }
 
     public sacar(numero: number, valor: number): void {
@@ -62,10 +65,10 @@ export class ContaController implements ContaRepository {
             console.log(colors.fg.green,"\nO Saque na Conta numero: " + numero + 
                         " foi efetuado com sucesso!", colors.reset);		
 		
-		}else
+		}else{
         console.log(colors.fg.red,"\nA Conta numero: " + numero + 
                     " não foi encontrada!", colors.reset);
-        
+        }
     }
 
     public depositar(numero: number, valor: number): void {
@@ -76,9 +79,10 @@ export class ContaController implements ContaRepository {
             console.log(colors.fg.green,"\nO Depósito na Conta numero: " + numero + 
                         " foi efetuado com sucesso!", colors.reset);		
 		
-		}else
+		}else{
         console.log(colors.fg.red,"\nA Conta numero: " + numero + 
                     " não foi encontrada!", colors.reset);
+        }             
     }
 
     public transferir(numeroOrigem: number, numeroDestino: number, valor: number): void {
@@ -93,10 +97,11 @@ export class ContaController implements ContaRepository {
                             colors.reset);		
             }
 		
-		}else
+		}else{
         console.log(colors.fg.red,"\nA Conta numero: " + numeroOrigem + 
                     " e/ou a Conta numero: " + numeroDestino + " não foram encontradas!", 
                     colors.reset);
+        }            
     }
 
     /*Métodos Auxiliares*/
